@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.1 (RELEASE-4.0.1-18da659; 2022-07-02T08:47:18+0000) XMLWS-Impl/4.0.0 XMLWS-API/${jaxws-api.version} XMLB-Impl/4.0.0 XMLB-API/4.0.0 git-revision#18da659. --><xs:schema xmlns:tns="http://perez/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://perez/">
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="teorema" type="tns:teorema"/>
+
+<xs:element name="teoremaResponse" type="tns:teoremaResponse"/>
+
+<xs:complexType name="teorema">
+<xs:sequence>
+<xs:element name="catA" type="xs:double"/>
+<xs:element name="catB" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="teoremaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
