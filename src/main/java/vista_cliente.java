@@ -1,3 +1,6 @@
+
+import perez.PerezMetodo_Service;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,14 +11,17 @@
  * @author LAB2BPC1
  */
 public class vista_cliente extends javax.swing.JFrame {
-
+    
+    PerezMetodo_Service instancia_clase = new PerezMetodo_Service();
+    PerezHipotenusa hipo;
     /**
      * Creates new form vista_cliente
      */
     public vista_cliente() {
         initComponents();
+        hipo = instancia_clase.PerezMetodo_Service();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -122,7 +128,11 @@ public class vista_cliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        double ladoA = Double.parseDouble(jTextField1.getText());
+        double ladoB = Double.parseDouble(jTextField1.getText());
+        
+        double resultado=hipo.hipotenusa(ladoA,ladoB);
+        jTextField3.setText(""+ resultado);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
